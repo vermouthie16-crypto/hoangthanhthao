@@ -1,3 +1,6 @@
+/* ĐƯỜNG DẪN IMPORT FONT TRỰC TIẾP VÀO CSS ĐỂ KHÔNG BỊ LỖI FONT */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@400;500;600;700;800&display=swap');
+
 :root {
   --sky-pale: #f2f9ff;
   --sky-soft: #e2f1ff;
@@ -11,7 +14,7 @@
   --shadow-soft: 0 15px 35px -15px rgba(94, 170, 239, 0.15);
   --radius-lg: 24px;
   --radius-sm: 14px;
-  --pink-highlight: #ff5983; /* Màu hồng nổi bật cho điểm mục tiêu */
+  --pink-highlight: #ff5983; /* Màu hồng nổi bật cho mục tiêu A+ */
 }
 
 * { 
@@ -31,7 +34,7 @@ body {
   animation: bg-shift 16s ease-in-out infinite;
   overflow-x: hidden; 
   position: relative;
-  display: flex; /* Layout chia cột: Trái làm Sidebar, Phải làm Nội dung chính */
+  display: flex; 
   min-height: 100vh;
 }
 
@@ -173,4 +176,80 @@ aside {
 }
 
 .nav-btn-outline { background: rgba(255,255,255,0.8); color: var(--blue-deep); border: 1.5px solid rgba(94,170,239,0.3); }
-.nav-btn-
+.nav-btn-outline:hover { background: #fff; transform: translateY(-2px); }
+.nav-btn-solid { background: linear-gradient(135deg, var(--blue-deep), var(--blue-mid)); color: #fff; }
+.nav-btn-solid:hover { transform: translateY(-2px); box-shadow: 0 8px 16px -6px rgba(94,170,239,0.4); }
+
+/* ================= VÙNG NỘI DUNG CHÍNH BÊN PHẢI ================= */
+main {
+  margin-left: 280px; 
+  flex: 1; padding: 40px 5vw; max-width: 1160px; position: relative; z-index: 2;
+}
+
+section { 
+  position: relative; 
+  padding: 50px 0; 
+  border-bottom: 1px solid rgba(94,170,239,0.1); 
+}
+
+section:last-of-type { 
+  border-bottom: none; 
+}
+
+.personal-banner {
+  width: 100%; height: 380px; border-radius: var(--radius-lg); overflow: hidden;
+  margin-bottom: 35px; box-shadow: var(--shadow-soft); border: 1px solid rgba(94,170,239,0.15);
+}
+
+.personal-banner img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+}
+
+.hero { display: flex; align-items: center; gap: 40px; justify-content: space-between; padding-top: 10px; }
+.hero-spotlight { flex: 1; max-width: 500px; }
+.hero-spotlight h1 { font-size: clamp(2.2rem, 4vw, 3rem); line-height: 1.2; margin: 0 0 14px; color: var(--blue-ink); }
+.hero-spotlight h1 span { color: var(--blue-deep); }
+
+.intro-card {
+  background: var(--white-soft); border: 1px solid rgba(94,169,232,0.15); border-radius: var(--radius-lg);
+  padding: 28px; box-shadow: var(--shadow-soft); max-width: 460px;
+}
+
+.intro-label {
+  display: inline-block; background: var(--sky-pale); color: var(--blue-deep); font-weight: 800;
+  font-size: 0.78rem; padding: 4px 14px; border-radius: 999px; margin-bottom: 10px;
+}
+
+.intro-card p { font-size: 0.96rem; line-height: 1.75; color: var(--blue-ink-soft); margin: 0 0 14px; }
+
+.eyebrow {
+  display: inline-block; background: #fff; padding: 4px 14px; border-radius: 999px;
+  font-weight: 700; font-size: 0.8rem; color: var(--blue-deep); box-shadow: var(--shadow-soft); margin-bottom: 12px;
+}
+
+.tag-chips { 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 8px; 
+}
+
+.tag-chip {
+  padding: 6px 14px; border-radius: 999px; font-weight: 700; font-size: 0.8rem;
+  background: #fff; border: 1px solid rgba(94,170,239,0.18); color: var(--blue-deep);
+}
+
+.hero-cta { 
+  margin-top: 18px; 
+  display: flex; 
+  gap: 12px; 
+}
+
+.btn {
+  padding: 11px 22px; border-radius: 999px; font-weight: 800; font-family: 'Quicksand', sans-serif;
+  cursor: pointer; border: none; font-size: 0.88rem; transition: all 0.3s ease; display: inline-block;
+}
+
+.btn-primary { background: linear-gradient(135deg, var(--blue-deep), var(--blue-mid)); color: #fff; }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 16px rgba(9
