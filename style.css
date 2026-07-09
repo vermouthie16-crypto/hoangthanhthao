@@ -157,3 +157,36 @@ aside {
 
 .nav-links li a:hover, .nav-links li a.active {
   background: linear-gradient
+}
+/* ================= CSS CHO DUY NHẤT 1 KHỐI MỤC TIÊU CĂN GIỮA TUYỆT ĐỐI ================= */
+.stats-row {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  text-align: center; 
+  margin-top: 30px; 
+  padding-top: 5px;
+}
+
+.stat { 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+}
+
+.stat .num {
+  font-family: 'Baloo 2', cursive; /* THÊM DÒNG NÀY: Để chữ A+ bo tròn, mập mặn dễ thương */
+  font-size: 3rem; 
+  font-weight: 800; 
+  color: var(--pink-highlight); 
+  margin-bottom: 4px; 
+  line-height: 1;
+}
+
+.stat .lbl { 
+  font-family: 'Quicksand', sans-serif; /* THÊM DÒNG NÀY: Để dòng chữ nhỏ mảnh mai, sạch sẽ */
+  font-size: 0.95rem; 
+  font-weight: 600; 
+  color: var(--blue-ink-soft); 
+  letter-spacing: 0.5px;
+}
