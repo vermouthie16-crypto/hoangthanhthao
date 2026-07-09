@@ -372,3 +372,56 @@ footer .heart {
     justify-content: center; 
   }
 }
+/* Khung chứa 3 cột số liệu nằm ngay bên trong summary-card */
+  .stats-row {
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+    text-align: center; 
+    margin-top: 25px; 
+    padding-top: 5px;
+    gap: 15px;
+  }
+  
+  .stat { 
+    flex: 1; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+  /* ĐẨY MỤC TIÊU A+ VÀO GIỮA: 
+     - Mặc định các thẻ có order: 0. 
+     - Đặt order: -1 cho dự án hoàn thành để nó đứng đầu (bên trái).
+     - Đặt order: 1 cho mức độ nhiệt huyết để nó đứng cuối (bên phải).
+     - Mục tiêu A+ giữ nguyên order: 0 sẽ tự động nằm ở giữa! 
+  */
+  .stat-project { order: -1; }
+  .stat-target { order: 0; }
+  .stat-effort { order: 1; }
+
+  .stat .num {
+    font-family: 'Baloo 2', cursive; 
+    font-size: 2.2rem; 
+    font-weight: 800; 
+    color: var(--pink-highlight); 
+    margin-bottom: 2px; 
+    line-height: 1;
+  }
+  
+  .stat .lbl { 
+    font-size: 0.88rem; 
+    font-weight: 600; 
+    color: var(--blue-ink-soft); 
+  }
+
+  /* Khi xem trên điện thoại (Màn hình nhỏ) */
+  @media (max-width: 900px){
+    /* ... các thuộc tính khác giữ nguyên ... */
+    .stats-row { 
+      flex-direction: column; 
+      gap: 20px; 
+    }
+    /* Hủy bỏ ép thứ tự khi lên điện thoại để hiển thị từ trên xuống dưới tự nhiên nếu muốn */
+    .stat-project, .stat-target, .stat-effort { order: 0; } 
+  }
